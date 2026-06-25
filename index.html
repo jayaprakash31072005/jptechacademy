@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JP Tech Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#1e293b;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:700;
+color:#2563eb;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#334155;
+font-weight:500;
+}
+
+.hero{
+padding-top:120px;
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+color:white;
+}
+
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+padding:80px 0;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:3.5rem;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:1.1rem;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:white;
+color:#2563eb;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+}
+
+.hero-card{
+flex:1;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:20px;
+}
+
+.hero-card h3{
+margin-bottom:15px;
+}
+
+.stats{
+padding:70px 0;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stat h2{
+color:#2563eb;
+font-size:2rem;
+}
+
+.section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.3rem;
+color:#0f172a;
+}
+
+.section-title p{
+color:#64748b;
+margin-top:10px;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.course{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.course:hover{
+transform:translateY(-5px);
+}
+
+.course h3{
+margin-bottom:15px;
+color:#2563eb;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-box{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.founder{
+background:#eff6ff;
+}
+
+.contact{
+background:#1e293b;
+color:white;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-card{
+background:#334155;
+padding:30px;
+border-radius:15px;
+}
+
+.contact-card h3{
+margin-bottom:15px;
+}
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero-content,
+.about,
+.contact-grid{
+grid-template-columns:1fr;
+display:grid;
+}
+
+.hero-text h1{
+font-size:2.3rem;
+}
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.nav-links{
+display:none;
+}
+}
+
+@media(max-width:480px){
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.hero-text h1{
+font-size:2rem;
+}
+
+.btn{
+display:block;
+text-align:center;
+}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">JP Tech Academy</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#courses">Programs</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+
+<div class="hero-text">
+<h1>Programming & AI Education For Future Innovators</h1>
+
+<p>
+Learn Python, Artificial Intelligence, Web Development,
+Databases and Future Technology Skills through practical projects.
+</p>
+
+<a href="#courses" class="btn">Explore Programs</a>
+</div>
+
+<div class="hero-card">
+<h3>One Year School Program</h3>
+
+<p>✔ Python Programming</p>
+<p>✔ Artificial Intelligence</p>
+<p>✔ Web Development</p>
+<p>✔ Database Fundamentals</p>
+<p>✔ Career Guidance</p>
+<p>✔ Project Based Learning</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h2>1 </h2>
+<p>Year Program</p>
+</div>
+
+<div class="stat">
+<h2>11</h2>
+<p>Modules</p>
+</div>
+
+<div class="stat">
+<h2>48</h2>
+<p>Weeks</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Practical Learning</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section" id="courses">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Programs Offered</h2>
+<p>Industry-focused learning programs</p>
+</div>
+
+<div class="course-grid">
+
+<div class="course">
+<h3>Python Programming</h3>
+<p>Build a strong foundation in coding and problem solving.</p>
+</div>
+
+<div class="course">
+<h3>Artificial Intelligence</h3>
+<p>Learn AI concepts, tools, and prompt engineering.</p>
+</div>
+
+<div class="course">
+<h3>Web Development</h3>
+<p>Create responsive websites using modern technologies.</p>
+</div>
+
+<div class="course">
+<h3>Database Fundamentals</h3>
+<p>Understand SQL and data management.</p>
+</div>
+
+<div class="course">
+<h3>Career Guidance</h3>
+<p>Resume building and interview preparation.</p>
+</div>
+
+<div class="course">
+<h3>School Training Programs</h3>
+<p>Customized AI and Programming curriculum for schools.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section founder" id="about">
+
+<div class="container">
+
+<div class="about">
+
+<div class="about-box">
+<h2>About JP Tech Academy</h2>
+<br>
+<p>
+JP Tech Academy is a technology education initiative dedicated
+to teaching Programming, Artificial Intelligence, Web Development,
+and Digital Skills.
+</p>
+
+<br>
+
+<p>
+Our mission is to bridge the gap between school education and
+industry expectations through practical learning and project-based training.
+</p>
+</div>
+
+<div class="about-box">
+<h2>Founder</h2>
+<br>
+
+<h3>Jayaprakash J.</h3>
+
+<p>
+Software Professional<br>
+Full Stack Developer<br>
+AI Trainer
+</p>
+
+<br>
+
+<p>
+Helping students learn future-ready technology skills and
+prepare for engineering and IT careers.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2 style="color:white">Contact Us</h2>
+<p style="color:#cbd5e1">Let's build future innovators together</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>JP Tech Academy</h3>
+<p>Programming & AI Education</p>
+<p>Vedaranyam, Nagapattinam, Tamil Nadu</p>
+</div>
+
+<div class="contact-card">
+<h3>Contact Details</h3>
+<p>Email: jptechacademy@gmail.com</p>
+<p>Mobile: +918122793940</p>
+<p>Founder: Jayaprakash J.</p>
+<p>School Programs & Workshops</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 JP Tech Academy | Learn • Build • Innovate</p>
+</footer>
+
+</body>
+</html>
